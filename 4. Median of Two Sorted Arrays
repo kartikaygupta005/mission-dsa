@@ -1,0 +1,16 @@
+class Solution:
+    def findMedianSortedArrays(self, nums1, nums2):
+        # Combine the two arrays
+        combined = nums1 + nums2
+        # Sort the combined array
+        combined.sort()
+
+        n = len(combined)
+        mid = n // 2
+
+        # If the length is odd, return the middle element
+        if n % 2 == 1:
+            return float(combined[mid])
+        else:
+            # If even, return the average of the two middle elements
+            return (combined[mid - 1] + combined[mid]) / 2.0
