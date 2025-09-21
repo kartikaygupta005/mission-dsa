@@ -8,4 +8,4 @@ class Solution(object):
 			mapping[temp[i]] = i
 	for i in range(len(nums)):
 		result.append(mapping[nums[i]])
-	return result
+	return result 
